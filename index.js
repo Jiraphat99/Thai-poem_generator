@@ -19,7 +19,7 @@ async function generatePoem(event) {
   }`;
 
   const poemEl = document.querySelector("#poem");
-  poemEl.textContent = "กำลังสร้างบทกลอน...";
+  const loadingInterval = showLoading();
 
   try {
     const response = await axios.get(API_URL, {
@@ -29,18 +29,37 @@ async function generatePoem(event) {
         key: API_KEY,
       },
     });
+    clearInterval(loadingInterval);
     displayPoem(response.data.answer);
   } catch (error) {
-    poemEl.textContent = "เกิดข้อผิดพลาดในการเชื่อมต่อ API";
+    clearInterval(loadingInterval);
+    poemEl.textContent = "ไม่สามารถเชื่อมต่อ API ได้ ลองใหม่อีกครั้งนะ 😢";
   }
+}
+
+function showLoading() {
+  const poemEl = document.querySelector("#poem");
+  let dots = 0;
+  const hints = ["🌸 ฝันถึงดวงดาว", "💧 ร้องเรียกสายฝน", "✨ ร้อยเรียงคำหวาน"];
+  let hintIndex = 0;
+  poemEl.textContent = "กำลังร้อยกรองบทกลอน";
+
+  return setInterval(() => {
+    dots = (dots + 1) % 4;
+    poemEl.textContent = `กำลังร้อยกรองบทกลอน${".".repeat(dots)} — ${
+      hints[hintIndex]
+    }`;
+    hintIndex = (hintIndex + 1) % hints.length;
+  }, 700);
 }
 
 function displayPoem(text) {
   if (!text) {
     document.querySelector("#poem").textContent =
-      "เกิดข้อผิดพลาด: ไม่สามารถสร้างบทกลอนได้";
+      "โอ๊ะ! เกิดข้อผิดพลาด ไม่สามารถสร้างบทกลอนได้ 😢";
     return;
   }
+
   new Typewriter("#poem", {
     strings: text.trim(),
     autoStart: true,
