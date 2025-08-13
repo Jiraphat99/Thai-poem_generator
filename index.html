@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thai Poem Generator</title>
+    <meta
+      name="description"
+      content="Generate short Thai poems (กลอน/กลอนเปล่า) with themes, tones, and seed words."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Thai Poem Generator</h1>
+      <p class="subtitle">
+        สร้างบทกลอนสั้น ๆ ตามธีมและอารมณ์ที่คุณเลือก — กลอนสี่หรือกลอนเปล่า
+        พร้อมสุ่มสัมผัสอย่างง่าย
+      </p>
+    </header>
+
+    <main class="app">
+      <section class="card" aria-labelledby="controls-title">
+        <h2 id="controls-title" style="margin-top: 0">ตั้งค่าบทกลอน</h2>
+        <form id="poemForm">
+          <div class="row">
+            <div>
+              <label for="style">รูปแบบ</label>
+              <select id="style" name="style">
+                <option value="khlon4">กลอนสี่ (4–8 บรรทัด)</option>
+                <option value="free">กลอนเปล่า</option>
+              </select>
+            </div>
+            <div>
+              <label for="length">ความยาว</label>
+              <select id="length" name="length">
+                <option value="4">4 บรรทัด</option>
+                <option value="6">6 บรรทัด</option>
+                <option value="8">8 บรรทัด</option>
+              </select>
+            </div>
+            <div>
+              <label for="theme">ธีม</label>
+              <select id="theme" name="theme">
+                <option value="love">ความรัก</option>
+                <option value="nature">ธรรมชาติ</option>
+                <option value="city">เมือง</option>
+                <option value="dream">ความฝัน</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="tone">โทน</label>
+              <select id="tone" name="tone">
+                <option value="sweet">หวาน</option>
+                <option value="sad">เศร้า</option>
+                <option value="bold">ฮึกเหิม</option>
+                <option value="playful">ขำ ๆ</option>
+              </select>
+            </div>
+            <div>
+              <label for="seed">คำสำคัญ (ไม่บังคับ)</label>
+              <input
+                id="seed"
+                name="seed"
+                type="text"
+                placeholder="เช่น ดาว / ฝน / ใจ"
+              />
+            </div>
+            <div>
+              <label for="rhyme">สัมผัสท้าย (ตัวอย่าง)</label>
+              <select id="rhyme" name="rhyme">
+                <option value="auto">สุ่มอัตโนมัติ</option>
+                <option value="ใจ">…ใจ</option>
+                <option value="ดาว">…ดาว</option>
+                <option value="ฝัน">…ฝัน</option>
+                <option value="งาม">…งาม</option>
+                <option value="ไกล">…ไกล</option>
+                <option value="หนาว">…หนาว</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="notes">บันทึก/บริบท (ช่วยไกด์การแต่ง)</label>
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="เล่าเรื่องเล็ก ๆ ที่อยากให้สื่อในบทกลอน"
+            ></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit">สร้างบทกลอน</button>
+            <button type="button" id="btn-variant" class="secondary">
+              สุ่มเวอร์ชันใหม่
+            </button>
+            <button type="reset" class="ghost">ล้างค่า</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="output-title">
+        <h2 id="output-title" style="margin-top: 0">ผลงาน</h2>
+        <div id="poem" class="poem" aria-live="polite">
+          ยังไม่มีบทกลอน ลองกด “สร้างบทกลอน” ดูนะ
+        </div>
+        <div class="actions" style="margin-top: 0.8rem">
+          <button type="button" id="btn-copy" class="secondary">คัดลอก</button>
+          <button type="button" id="btn-download" class="secondary">
+            ดาวน์โหลด .txt
+          </button>
+          <button type="button" id="btn-share" class="ghost">ลิงก์แชร์</button>
+        </div>
+        <div class="meta" id="meta"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Coded with 💜 by Jirapat Wonganan</p>
+      <p>
+        Open sourced on <a href="#" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </footer>
+    <script></script>
+  </body>
+</html>
