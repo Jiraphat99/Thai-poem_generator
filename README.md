@@ -1,24 +1,33 @@
 # Thai-Poem Generator 🌸
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge\&logo=netlify)](https://thaipoemsgenerator.netlify.app/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 A **web application** that generates original **Thai poems**. Explore Thai poetry creatively with just a few clicks!
 
-## Features
+---
+
+## 🌐 Live Demo
+
+Try it now: [https://thaipoemsgenerator.netlify.app/](https://thaipoemsgenerator.netlify.app/)
+
+---
+
+## ✨ Features
 
 * Generate beautiful Thai poems instantly.
-* User-friendly web interface.
+* User-friendly and responsive web interface.
 * Supports multiple poem themes.
-* Lightweight and responsive design.
+* Lightweight and fast.
 
-## Demo
+---
 
-You can run the project locally or deploy it on GitHub Pages for live access.
-
-## Installation
+## 💻 Installation (Local)
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Jiraphat99/Thai-poem_generator
+git clone https://github.com/your-username/Thai-poem_generator.git
 cd Thai-poem_generator
 ```
 
@@ -27,16 +36,20 @@ cd Thai-poem_generator
 * Double-click `index.html`, or
 * Right-click → Open with → Browser of your choice.
 
-No additional installation needed!
+No additional installation required!
 
-## Usage
+---
+
+## 🖱️ Usage
 
 1. Open the web app in your browser.
 2. Enter a theme or keyword for your poem.
 3. Click **Generate** to see your Thai poem.
 4. Enjoy or copy the poem for your own use.
 
-## Folder Structure
+---
+
+## 🗂️ Folder Structure
 
 ```
 Thai-poem_generator/
@@ -45,7 +58,15 @@ Thai-poem_generator/
 ├─ script.js        # JavaScript logic
 ```
 
-## Contributing
+---
+
+## 📸 Screenshot
+
+![Thai Poem Generator Screenshot](assets/screenshot.png)
+
+---
+
+## 🤝 Contributing
 
 Contributions are welcome!
 
@@ -56,8 +77,8 @@ Contributions are welcome!
 5. Push to the branch: `git push origin feature-name`
 6. Open a Pull Request.
 
-## License
+---
+
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-Do you want me to do that?
