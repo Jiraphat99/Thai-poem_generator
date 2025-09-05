@@ -1,6 +1,6 @@
 # Thai-Poem Generator 🌸
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge\&logo=netlify)](https://thaipoemsgenerator.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=netlify)](https://thaipoemsgenerator.netlify.app/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 A **web application** that generates original **Thai poems**. Explore Thai poetry creatively with just a few clicks!
@@ -15,10 +15,10 @@ Try it now: [https://thaipoemsgenerator.netlify.app/](https://thaipoemsgenerator
 
 ## ✨ Features
 
-* Generate beautiful Thai poems instantly.
-* User-friendly and responsive web interface.
-* Supports multiple poem themes.
-* Lightweight and fast.
+- Generate beautiful Thai poems instantly.
+- User-friendly and responsive web interface.
+- Supports multiple poem themes.
+- Lightweight and fast.
 
 ---
 
@@ -33,8 +33,8 @@ cd Thai-poem_generator
 
 2. Open the `index.html` file in your browser:
 
-* Double-click `index.html`, or
-* Right-click → Open with → Browser of your choice.
+- Double-click `index.html`, or
+- Right-click → Open with → Browser of your choice.
 
 No additional installation required!
 
@@ -56,6 +56,7 @@ Thai-poem_generator/
 ├─ index.html       # Main HTML page
 ├─ style.css        # Stylesheet
 ├─ script.js        # JavaScript logic
+└─ assets/          # Images or other assets
 ```
 
 ---
