@@ -63,7 +63,7 @@ Thai-poem_generator/
 
 ## 📸 Screenshot
 
-![Thai Poem Generator Screenshot](assets/screenshot.png)
+![Thai Poem Generator Screenshot](assets/img/App-screenshot.png)
 
 ---
 
